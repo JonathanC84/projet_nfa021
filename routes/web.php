@@ -23,17 +23,28 @@ Route::get('/', [MainController::class, 'index'])->name('main.index');
 Route::get('/test-index', [MainController::class, 'testIndex'])->name('main.test-index');
 Route::get('/carte', [MainController::class, 'carte'])->name('main.carte');
 
-// reservation
+// reservation côté client
+// formulaire de réservation
 Route::get('/reservation', [UserReservationController::class, 'create'])->name('reservation.create');
+// traitement des données
 Route::post('/reservation', [UserReservationController::class, 'store'])->name('reservation.store');
+// page récapitulatif (options : valider, modifier, annuler)
 Route::get('/reservation/{id}/done', [UserReservationController::class, 'done'])->name('reservation.done');
+// formulaire de modification
 Route::get('/reservation/{id}/', [UserReservationController::class, 'edit'])->name('reservation.edit');
+// traitement des données modifiées
 Route::put('/reservation', [UserReservationController::class, 'update'])->name('reservation.update');
+// suppression de la réservation (bouton "annuler")
 Route::delete('/reservation/{id}', [UserReservationController::class, 'destroy'])->name('reservation.destroy');
 
+// routes des principales vues
+// page contact
 Route::get('/contact', [MainController::class, 'contact'])->name('main.contact');
+// homepage
 Route::get('/test', [MainController::class, 'test'])->name('main.test');
-Route::get('/test-resa', [MainController::class, 'testReservation'])->name('main.testReservation');
+
+// page de test
+// Route::get('/test-resa', [MainController::class, 'testReservation'])->name('main.testReservation');
 
 // back office
 
