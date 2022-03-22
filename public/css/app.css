@@ -1,0 +1,524 @@
+@import url(https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Barlow:wght@400;600&family=Roboto+Slab:wght@300;400&display=swap);
+.blocReservation {
+    background-color: #dff2f6;
+    color: #202e1f;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 8vw;
+    border: #202e1f 2px solid;
+    border-radius: 24px;
+}
+
+@media screen and (max-width:440px) {
+    .blocReservation {
+        border: none;
+    }
+}
+
+.blocReservation h1 {
+    font-weight: 400;
+    padding: 1em 0;
+}
+
+.blocReservation p {
+    padding: 1em 0;
+}
+form>div {
+    margin-bottom: 16px;
+}
+
+input, textarea {
+    width: 200px;
+    padding: 8px 4px;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    color: #202e1f;
+    border: 1px solid #202e1f;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type=number] {
+    font-size: x-large;
+    font-weight: 900;
+}
+
+input[type=date], input[type=time] {
+    padding: 12px 8px;
+    font-size: x-large;
+    font-weight: 900;
+}
+
+input:focus {
+    outline: none;
+    border-color: yellowgreen;
+}
+
+.recap {
+    margin: 0 24px;
+    text-align: center;
+    font-size: large;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.erreur_champ {
+    color: #bf213f;
+    width: auto;
+    font-weight: 900;
+    padding: 8px 4px;
+    text-align: center;
+    background-color: #e0b2bb;
+}
+
+.reservez {
+    padding: 12px;
+    margin: 24px 0;
+    width: 200px;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    text-transform: uppercase;
+    background-color: #202e1f;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.reservez:hover {
+    background-color: white;
+    color: #202e1f;
+}
+
+.reservez:active {
+    background-color: white;
+    color: #202e1f;
+}
+
+.confirmer {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 24px 0 12px 0;
+    width: 200px;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #202e1f;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+
+.confirmer:hover {
+    background-color: white;
+    color: #202e1f;
+}
+
+.confimer:active {
+    background-color: white;
+    color: #202e1f;
+}
+
+.modifier {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 12px 0;
+    width: 200px;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #f5bd19;
+    color: #202e1f;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+
+.modifier:hover {
+    background-color: white;
+    color: #202e1f;
+}
+
+.modifier:active {
+    background-color: white;
+    color: #202e1f;
+}
+
+.supprimer {
+    padding: 12px;
+    margin: 12px 0 24px 0;
+    width: 200px;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    text-transform: uppercase;
+    background-color: #bf213f;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+
+.supprimer:hover {
+    background-color: white;
+    color: #202e1f;
+}
+
+.supprimer:active {
+    background-color: white;
+    color: #202e1f;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: url(/img/background.jpg) no-repeat top center;
+    background-size: 100%;
+    background-color: #d8ebef;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+}
+
+@media screen and (max-width:768px)  {
+    html {
+        background: url(/img/background_mobile.jpg) no-repeat top center;
+        background-size: contain;
+        background-color: #dff2f6;
+    }
+}
+
+
+
+
+/* HEADER */
+
+
+.logo {
+    margin-top: 11vw;
+    margin-bottom: 5vw;
+}
+
+@media screen and (max-width:768px)  {
+    .logo {
+        margin-top: 30vw;
+    }
+}
+
+.logo a {
+    display: block;
+    margin: 0 auto;
+    width: 33.125vw;
+    max-width: 477px;
+    min-width: 223px;
+}
+
+.logo a>img {
+    width: 100%;
+}
+
+.menu {
+    list-style-type: none;
+    margin-bottom: 8vw;
+    font-size: 1.125em;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:768px) {
+    .menu {
+        display: none;
+    }
+}
+
+.menu li>a {
+    color: #202e1f;
+    text-decoration: none;
+    border-bottom: transparent 2px solid;
+    padding: 1em;
+    letter-spacing: 0.05em;
+    transition-property: color, border;
+    transition: 0.15s;
+}
+
+.menu li>a:hover {
+    color: #f5bd19;
+    border-bottom: #f5bd19 2px solid;
+}
+
+#intro {
+    margin-top: 8vw;
+    margin-bottom: 16vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #202e1f;
+    font-size: 3em;
+    line-height: 1.5em;
+    letter-spacing: 0.025em;
+}
+
+@media screen and (max-width:768px) {
+    #intro {
+        font-size: 6vw;
+        margin-top: 16vw;
+        margin-bottom: 112vw;
+    }
+}
+
+#texte_rouge {
+    color: #bf213f;
+}
+
+
+
+
+/* MAIN */
+
+
+.carte {
+    display: flex;
+    background-color: #f5bd19;
+}
+
+#carte_photo_large {
+    flex: 2;
+    background: no-repeat url(/img/plat_poulet.jpg) center center;
+    background-size: cover;
+}
+
+#carte_texte {
+    flex: 1;
+    color: #202e1f;
+    text-align: center;
+    margin: 2.75vw 0;
+    padding: 2em 0;
+    min-width: 480px;
+}
+
+@media screen and (max-width: 768px) {
+    #carte_texte {
+        min-width: 100%;
+    }
+
+    #carte_photo_large {
+        display: none;
+    }
+}
+
+#carte_texte p {
+    font-family: 'Roboto Slab', serif;
+    padding: 2vw;
+    margin-bottom: 4vw;
+}
+
+@media (min-width: 320px) {
+    #carte_texte p {
+      font-size: calc(1.125em + ((1vw - 0.2em) * 0.5357));
+      min-height: 0vw;
+    }
+  }
+  @media (min-width: 1440px) {
+    #carte_texte p {
+      font-size: 1.5em;
+    }
+  }
+
+#carte_photo_small {
+    min-width: 100%;
+    min-height: 72vw;
+    margin-bottom: 6vw;
+    background: no-repeat url(/img/plat_poulet.jpg) center center;
+    background-size: contain;
+}
+
+@media screen and (min-width: 769px) {
+    #carte_photo_small {
+        display: none;
+    }    
+}
+
+#lien_carte {
+    display: block;
+    width: 160px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #202e1f;
+    text-transform: uppercase;
+    padding: 0.5em 0;
+    font-size: 1em;
+    border: #202e1f solid 2px;
+    border-radius: 20px;
+    transition: all 0.15s;
+}
+
+#lien_carte:hover {
+    color: #f2f2f2;
+    background-color: #202e1f;
+}
+
+.actus {
+    background-color: #bf213f;
+    text-align: center;
+    padding-top: 4em;
+    padding-bottom: 6em;
+}
+
+.en_ce_moment h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    padding: 4vw 0;
+}
+
+@media screen and (max-width:768px) {
+    .en_ce_moment h1 {
+        font-size: 1.2em;
+    }
+}
+
+.photos_actus {
+    display: flex;
+    justify-content: stretch;
+    margin-bottom: 6em;
+}
+
+.titre_actu {
+    width: 100%;
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#actu_01, #actu_02 {
+    display: flex;
+    width: 50%;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#actu_01 {
+    background-image: url(/img/salle.jpg);
+}
+
+#actu_02 {
+    background-image: url(/img/fruits.jpg);
+}
+
+.lien_reservez {
+    display: block;
+    width: 240px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    padding: 0.5em 0;
+    font-size: 1.5em;
+    background-color: black;
+    border-radius: 40px;
+    transition: all 0.2s;
+}
+
+.lien_reservez:hover {
+    color: #bf213f;
+    background-color: #f2f2f2;
+}
+
+
+
+
+/* FOOTER */
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 300;
+    background-color: #213629;
+    padding: 1.25em;
+}
+
+.footer div {
+    margin: 1em 0;
+}
+
+.contact {
+    font-size: 1.125em;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+.contact a:hover {
+    color: #f5bd19;
+}
+
+.reseaux {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.reseaux div {
+    padding: 0 1.5em;
+}
+
+.fb a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: url(/img/facebook.png) no-repeat center;
+}
+
+.insta a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: url(/img/instagram.png) no-repeat center;
+}
+
+.fb a:hover {
+    background-image: url(/img/facebook_hover.png);
+}
+
+.insta a:hover {
+    background-image: url(/img/instagram_hover.png);
+}
+
+.copyright p {
+    padding-top: 1em;
+    color: #415d3f;
+    text-align: center;
+    border-top: #415d3f 2px solid;
+}

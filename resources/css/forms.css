@@ -1,0 +1,157 @@
+form>div {
+    margin-bottom: 16px;
+}
+
+input, textarea {
+    width: 200px;
+    padding: 8px 4px;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    color: #202e1f;
+    border: 1px solid #202e1f;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type=number] {
+    font-size: x-large;
+    font-weight: 900;
+}
+
+input[type=date], input[type=time] {
+    padding: 12px 8px;
+    font-size: x-large;
+    font-weight: 900;
+}
+
+input:focus {
+    outline: none;
+    border-color: yellowgreen;
+}
+
+.recap {
+    margin: 0 24px;
+    text-align: center;
+    font-size: large;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.erreur_champ {
+    color: #bf213f;
+    width: auto;
+    font-weight: 900;
+    padding: 8px 4px;
+    text-align: center;
+    background-color: #e0b2bb;
+}
+
+.reservez {
+    padding: 12px;
+    margin: 24px 0;
+    width: 200px;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    text-transform: uppercase;
+    background-color: #202e1f;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.reservez:hover {
+    background-color: white;
+    color: #202e1f;
+}
+
+.reservez:active {
+    background-color: white;
+    color: #202e1f;
+}
+
+.confirmer {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 24px 0 12px 0;
+    width: 200px;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #202e1f;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+
+.confirmer:hover {
+    background-color: white;
+    color: #202e1f;
+}
+
+.confimer:active {
+    background-color: white;
+    color: #202e1f;
+}
+
+.modifier {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 12px 0;
+    width: 200px;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #f5bd19;
+    color: #202e1f;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+
+.modifier:hover {
+    background-color: white;
+    color: #202e1f;
+}
+
+.modifier:active {
+    background-color: white;
+    color: #202e1f;
+}
+
+.supprimer {
+    padding: 12px;
+    margin: 12px 0 24px 0;
+    width: 200px;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    text-transform: uppercase;
+    background-color: #bf213f;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+
+.supprimer:hover {
+    background-color: white;
+    color: #202e1f;
+}
+
+.supprimer:active {
+    background-color: white;
+    color: #202e1f;
+}
