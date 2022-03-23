@@ -1,0 +1,160 @@
+/* MAIN */
+
+
+.carte {
+    display: flex;
+    background-color: #f5bd19;
+}
+
+#carte_photo_large {
+    flex: 2;
+    background: no-repeat url(/img/plat_poulet.jpg) center center;
+    background-size: cover;
+}
+
+#carte_texte {
+    flex: 1;
+    color: #202e1f;
+    text-align: center;
+    margin: 2.75vw 0;
+    padding: 2em 0;
+    min-width: 480px;
+}
+
+@media screen and (max-width: 768px) {
+    #carte_texte {
+        min-width: 100%;
+    }
+
+    #carte_photo_large {
+        display: none;
+    }
+}
+
+#carte_texte p {
+    font-family: 'Roboto Slab', serif;
+    padding: 2vw;
+    margin-bottom: 4vw;
+}
+
+@media (min-width: 320px) {
+    #carte_texte p {
+      font-size: calc(1.125em + ((1vw - 0.2em) * 0.5357));
+      min-height: 0vw;
+    }
+  }
+  @media (min-width: 1440px) {
+    #carte_texte p {
+      font-size: 1.5em;
+    }
+  }
+
+#carte_photo_small {
+    min-width: 100%;
+    min-height: 72vw;
+    margin-bottom: 6vw;
+    background: no-repeat url(/img/plat_poulet.jpg) center center;
+    background-size: contain;
+}
+
+@media screen and (min-width: 769px) {
+    #carte_photo_small {
+        display: none;
+    }    
+}
+
+#lien_carte {
+    display: block;
+    width: 160px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #202e1f;
+    text-transform: uppercase;
+    padding: 0.5em 0;
+    font-size: 1em;
+    border: #202e1f solid 2px;
+    border-radius: 20px;
+    transition: all 0.15s;
+}
+
+#lien_carte:hover {
+    color: #f2f2f2;
+    background-color: #202e1f;
+}
+
+.actus {
+    background-color: #bf213f;
+    text-align: center;
+    padding-top: 4em;
+    padding-bottom: 6em;
+}
+
+.en_ce_moment h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    padding: 4vw 0;
+}
+
+@media screen and (max-width:768px) {
+    .en_ce_moment h1 {
+        font-size: 1.2em;
+    }
+}
+
+.photos_actus {
+    display: flex;
+    justify-content: stretch;
+    margin-bottom: 6em;
+}
+
+.titre_actu {
+    width: 100%;
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#actu_01, #actu_02 {
+    display: flex;
+    width: 50%;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#actu_01 {
+    background-image: url(/img/salle.jpg);
+}
+
+#actu_02 {
+    background-image: url(/img/fruits.jpg);
+}
+
+.lien_reservez {
+    display: block;
+    width: 240px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    padding: 0.5em 0;
+    font-size: 1.5em;
+    background-color: #0f0f0f;
+    border-radius: 40px;
+    transition: all 0.2s;
+}
+
+.lien_reservez:hover {
+    color: #bf213f;
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,21 @@
+.blocReservation {
+    background-color: #bf213f;
+    color: white;
+    text-align: center;
+    margin-top: 4vw;
+    padding-bottom: 4vw;
+}
+
+.blocReservation h1 {
+    font-weight: 400;
+    padding: 1em 0;
+}
+
+.blocReservation p {
+    padding: 1em 0;
+}
+
+.table_picto {
+    text-align: center;
+    margin-bottom: 4vw;
+}

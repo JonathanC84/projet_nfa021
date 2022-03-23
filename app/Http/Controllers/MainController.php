@@ -27,7 +27,14 @@ class MainController extends Controller
     
     public function carte()
     {
-        return view('main.carte');
+        $plats = Plat::select()
+            ->orderBy('categorie_id')
+            ->orderBy('nom')
+            ->get();
+
+        return view('main.carte', [
+            'plats' => $plats,
+        ]);
     }
 
     public function reservation()

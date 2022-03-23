@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
+<html class="background-fade-in" lang="{{ config('app.locale') }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>O'Buro - @yield('title')</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
 
@@ -13,19 +13,36 @@
 
     @section('script')
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="https://kit.fontawesome.com/5e669a5a28.js" crossorigin="anonymous"></script>
     @show
 </head>
 
-<body>
+<body class="fade-in">
 
     <header>
-        <div class="logo">
-            <a href="{{ route('main.index') }}">
-                <img src="{{asset('img/logo.svg')}}" alt="logo">
-            </a>           
-        </div>
-
         <nav>
+            <div class="burger-icon">
+                <a onclick="openBurger()"><i class="fa-solid fa-bars fa-2x"></i></a>
+            </div>
+
+            <div id="burger-menu" class="burger-menu">
+                <div class="close-menu">
+                    <a href="javascript:void(0)" onclick="closeBurger()"><i class="fa-solid fa-xmark fa-3x"></i></a>
+                </div>
+
+                <div class="menu-overlay">
+                    <a href="{{ route('main.carte') }}">La carte</a>
+                    <a href="{{ route('reservation.create') }}">Réserver</a>
+                    <a href="{{ route('main.contact') }}">Contact</a>
+                </div>
+            </div>
+
+            <div class="logo">
+                <a href="{{ route('main.index') }}">
+                    <img src="{{asset('img/logo.svg')}}" alt="logo">
+                </a>           
+            </div>
+
             <ul class="menu">
                 <li><a href="{{ route('main.carte') }}">La carte</a></li>
                 <li><a href="{{ route('reservation.create') }}">Réserver</a></li>
@@ -37,7 +54,7 @@
     @section('content')
     @show
 
-    <footer class="footer">
+    <footer>
 
         <div><img src="{{ asset('img/localisation_fin.png') }}"></div>
 
@@ -53,8 +70,8 @@
         </div>
 
         <div class="reseaux">
-            <div class="fb"><a target="blank" href="https://www.facebook.com/mamasita.club"></a></div>
-            <div class="insta"><a target="blank" href="https://www.instagram.com/?hl=fr"></a></div>
+            <a target="blank" href="https://www.facebook.com/mamasita.club"><i class="fa-brands fa-facebook-square fa-3x"></i></a>
+            <a target="blank" href="https://www.instagram.com/?hl=fr"><i class="fa-brands fa-instagram fa-3x"></i></a>
         </div>
 
         <div class="copyright">

@@ -1,0 +1,80 @@
+.burger-icon {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    float: right;
+    height: 50px;
+    width: 50px;
+    box-sizing: border-box;
+    padding-top: 9px;
+    text-align: center;
+    background-color: #213629;
+    border-radius: 50%;
+}
+
+.burger-icon a {
+    display: block;
+    color: white;
+}
+
+@media screen and (min-width:769px) {
+    .burger-icon {
+        display: none;
+    }    
+
+    .burger-menu {
+        display: none;
+    }
+}
+
+.burger-menu {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #213629;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.menu-overlay {
+    position: relative;
+    top: 75px;
+    width: 100%;
+    text-align: left;
+}
+  
+.menu-overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding-left: 0.5em;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    border-bottom: #415d3f 1px solid;
+}
+  
+.menu-overlay a:hover, .menu-overlay a:focus {
+    color: #213629;
+    background-color: white;
+}
+  
+.close-menu {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 18px;
+    right: 18px;
+    box-sizing: border-box;
+    padding-top: 4px;
+    text-align: center;
+}
+
+.close-menu a {
+    display: block;
+    color: white;
+}

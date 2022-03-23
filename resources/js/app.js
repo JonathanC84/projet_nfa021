@@ -1,3 +1,3 @@
 require('./bootstrap');
-
-console.log('Hello Laravel!');
+require('./scroll_animation')
+require('./burger');

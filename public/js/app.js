@@ -2062,7 +2062,9 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-console.log('Hello Laravel!');
+__webpack_require__(/*! ./scroll_animation */ "./resources/js/scroll_animation.js");
+
+__webpack_require__(/*! ./burger */ "./resources/js/burger.js");
 
 /***/ }),
 
@@ -2094,6 +2096,55 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/burger.js":
+/*!********************************!*\
+  !*** ./resources/js/burger.js ***!
+  \********************************/
+/***/ (() => {
+
+window.openBurger = openBurger;
+window.closeBurger = closeBurger;
+
+function openBurger() {
+  document.getElementById("burger-menu").style.height = "100%";
+}
+
+function closeBurger() {
+  document.getElementById("burger-menu").style.height = "0%";
+}
+
+/***/ }),
+
+/***/ "./resources/js/scroll_animation.js":
+/*!******************************************!*\
+  !*** ./resources/js/scroll_animation.js ***!
+  \******************************************/
+/***/ (() => {
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.addEventListener("scroll", function (event) {
+    var animatedBoxes = document.getElementsByClassName("animated-box");
+    var windowOffsetTop = window.innerHeight + window.scrollY;
+    Array.prototype.forEach.call(animatedBoxes, function (animatedBox) {
+      var animatedBoxOffsetTop = animatedBox.offsetTop;
+
+      if (windowOffsetTop >= animatedBoxOffsetTop) {
+        addClass(animatedBox, "fade-in");
+      }
+    });
+  });
+});
+
+function addClass(element, className) {
+  var arrayClasses = element.className.split(" ");
+
+  if (arrayClasses.indexOf(className) === -1) {
+    element.className += " " + className;
+  }
+}
 
 /***/ }),
 

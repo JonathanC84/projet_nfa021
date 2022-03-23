@@ -1,0 +1,57 @@
+/* FOOTER */
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 300;
+    background-color: #213629;
+    padding: 1.25em;
+}
+
+footer div {
+    margin: 1em 0;
+}
+
+.contact {
+    font-size: 1.125em;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+.contact a:hover {
+    color: #f5bd19;
+}
+
+.reseaux {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.reseaux a {
+    padding: 0 1.5em;
+    color: white;
+}
+
+.reseaux a:hover {
+    color: #f5bd19;
+}
+
+.insta a:hover {
+    background-image: url(/img/instagram_hover.png);
+}
+
+.copyright p {
+    padding-top: 1em;
+    color: #415d3f;
+    text-align: center;
+    border-top: #415d3f 2px solid;
+}

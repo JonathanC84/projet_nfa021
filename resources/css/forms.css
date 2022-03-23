@@ -1,20 +1,28 @@
-form>div {
-    margin-bottom: 16px;
-}
-
 input, textarea {
-    width: 200px;
     padding: 8px 4px;
     text-align: center;
     font-family: 'Barlow', sans-serif;
     font-size: medium;
     color: #202e1f;
-    border: 1px solid #202e1f;
+    border: 2px solid #213629;
     border-radius: 8px;
+}
+
+input {
+    width: 200px;
+    margin: 0 8px 16px 8px;
 }
 
 textarea {
     resize: none;
+    margin: 16px 8px;
+    width: 416px;
+}
+
+@media screen and (max-width:459px) {
+    textarea {
+        width: 200px;
+    }
 }
 
 input[type=number] {
@@ -37,8 +45,6 @@ input:focus {
     margin: 0 24px;
     text-align: center;
     font-size: large;
-    background-color: white;
-    border-radius: 12px;
 }
 
 .erreur_champ {
@@ -53,21 +59,21 @@ input:focus {
 .reservez {
     padding: 12px;
     margin: 24px 0;
-    width: 200px;
+    width: 240px;
     font-family: 'Barlow', sans-serif;
-    font-size: medium;
+    font-size: 1.5em;
     text-transform: uppercase;
-    background-color: #202e1f;
+    background-color: #0f0f0f;
     color: white;
     border: none;
-    border-radius: 24px;
+    border-radius: 40px;
     cursor: pointer;
     transition: all ease 0.2s;
 }
 
 .reservez:hover {
     background-color: white;
-    color: #202e1f;
+    color: #bf213f;
 }
 
 .reservez:active {
@@ -76,18 +82,17 @@ input:focus {
 }
 
 .confirmer {
-    display: inline-block;
+    display: block;
     box-sizing: border-box;
     padding: 12px;
-    margin: 24px 0 12px 0;
+    margin: 24px auto 12px;
     width: 200px;
     font-family: 'Barlow', sans-serif;
     font-size: medium;
     text-transform: uppercase;
     text-decoration: none;
-    background-color: #202e1f;
     color: white;
-    border: none;
+    border: 2px solid white;
     border-radius: 24px;
     cursor: pointer;
     transition: all ease 0.1s;
@@ -95,27 +100,26 @@ input:focus {
 
 .confirmer:hover {
     background-color: white;
-    color: #202e1f;
+    color: #0f0f0f;
 }
 
 .confimer:active {
     background-color: white;
-    color: #202e1f;
+    color: #0f0f0f;
 }
 
 .modifier {
-    display: inline-block;
+    display: block;
     box-sizing: border-box;
     padding: 12px;
-    margin: 12px 0;
+    margin: 24px auto 12px;
     width: 200px;
     font-family: 'Barlow', sans-serif;
     font-size: medium;
     text-transform: uppercase;
     text-decoration: none;
-    background-color: #f5bd19;
-    color: #202e1f;
-    border: none;
+    color: white;
+    border: 2px solid white;
     border-radius: 24px;
     cursor: pointer;
     transition: all ease 0.1s;
@@ -123,12 +127,12 @@ input:focus {
 
 .modifier:hover {
     background-color: white;
-    color: #202e1f;
+    color: #0f0f0f;
 }
 
 .modifier:active {
     background-color: white;
-    color: #202e1f;
+    color: #0f0f0f;
 }
 
 .supprimer {
@@ -138,9 +142,9 @@ input:focus {
     font-family: 'Barlow', sans-serif;
     font-size: medium;
     text-transform: uppercase;
-    background-color: #bf213f;
+    background-color: #0f0f0f;
     color: white;
-    border: none;
+    border: 2px solid #0f0f0f;
     border-radius: 24px;
     cursor: pointer;
     transition: all ease 0.1s;
@@ -148,10 +152,12 @@ input:focus {
 
 .supprimer:hover {
     background-color: white;
-    color: #202e1f;
+    color: #0f0f0f;
+    border-color: white;
 }
 
 .supprimer:active {
     background-color: white;
-    color: #202e1f;
+    color: #0f0f0f;
+    border-color: white;
 }

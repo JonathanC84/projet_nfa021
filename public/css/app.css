@@ -1,221 +1,100 @@
 @import url(https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Barlow:wght@400;600&family=Roboto+Slab:wght@300;400&display=swap);
-.blocReservation {
-    background-color: #dff2f6;
-    color: #202e1f;
+.burger-icon {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    float: right;
+    height: 50px;
+    width: 50px;
+    box-sizing: border-box;
+    padding-top: 9px;
     text-align: center;
-    max-width: 400px;
-    margin: 0 auto;
-    margin-bottom: 8vw;
-    border: #202e1f 2px solid;
-    border-radius: 24px;
+    background-color: #213629;
+    border-radius: 50%;
 }
 
-@media screen and (max-width:440px) {
-    .blocReservation {
-        border: none;
+.burger-icon a {
+    display: block;
+    color: white;
+}
+
+@media screen and (min-width:769px) {
+    .burger-icon {
+        display: none;
+    }    
+
+    .burger-menu {
+        display: none;
     }
 }
 
-.blocReservation h1 {
-    font-weight: 400;
-    padding: 1em 0;
+.burger-menu {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #213629;
+    overflow-y: hidden;
+    transition: 0.5s;
 }
 
-.blocReservation p {
-    padding: 1em 0;
+.menu-overlay {
+    position: relative;
+    top: 75px;
+    width: 100%;
+    text-align: left;
 }
-form>div {
-    margin-bottom: 16px;
-}
-
-input, textarea {
-    width: 200px;
-    padding: 8px 4px;
-    text-align: center;
-    font-family: 'Barlow', sans-serif;
-    font-size: medium;
-    color: #202e1f;
-    border: 1px solid #202e1f;
-    border-radius: 8px;
-}
-
-textarea {
-    resize: none;
-}
-
-input[type=number] {
-    font-size: x-large;
-    font-weight: 900;
-}
-
-input[type=date], input[type=time] {
-    padding: 12px 8px;
-    font-size: x-large;
-    font-weight: 900;
-}
-
-input:focus {
-    outline: none;
-    border-color: yellowgreen;
-}
-
-.recap {
-    margin: 0 24px;
-    text-align: center;
-    font-size: large;
-    background-color: white;
-    border-radius: 12px;
-}
-
-.erreur_champ {
-    color: #bf213f;
-    width: auto;
-    font-weight: 900;
-    padding: 8px 4px;
-    text-align: center;
-    background-color: #e0b2bb;
-}
-
-.reservez {
-    padding: 12px;
-    margin: 24px 0;
-    width: 200px;
-    font-family: 'Barlow', sans-serif;
-    font-size: medium;
-    text-transform: uppercase;
-    background-color: #202e1f;
-    color: white;
-    border: none;
-    border-radius: 24px;
-    cursor: pointer;
-    transition: all ease 0.2s;
-}
-
-.reservez:hover {
-    background-color: white;
-    color: #202e1f;
-}
-
-.reservez:active {
-    background-color: white;
-    color: #202e1f;
-}
-
-.confirmer {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 12px;
-    margin: 24px 0 12px 0;
-    width: 200px;
-    font-family: 'Barlow', sans-serif;
-    font-size: medium;
-    text-transform: uppercase;
+  
+.menu-overlay a {
+    padding: 8px;
     text-decoration: none;
-    background-color: #202e1f;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding-left: 0.5em;
     color: white;
-    border: none;
-    border-radius: 24px;
-    cursor: pointer;
-    transition: all ease 0.1s;
+    display: block;
+    transition: 0.3s;
+    border-bottom: #415d3f 1px solid;
 }
-
-.confirmer:hover {
+  
+.menu-overlay a:hover, .menu-overlay a:focus {
+    color: #213629;
     background-color: white;
-    color: #202e1f;
 }
-
-.confimer:active {
-    background-color: white;
-    color: #202e1f;
-}
-
-.modifier {
-    display: inline-block;
+  
+.close-menu {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 18px;
+    right: 18px;
     box-sizing: border-box;
-    padding: 12px;
-    margin: 12px 0;
-    width: 200px;
-    font-family: 'Barlow', sans-serif;
-    font-size: medium;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: #f5bd19;
-    color: #202e1f;
-    border: none;
-    border-radius: 24px;
-    cursor: pointer;
-    transition: all ease 0.1s;
+    padding-top: 4px;
+    text-align: center;
 }
 
-.modifier:hover {
-    background-color: white;
-    color: #202e1f;
-}
-
-.modifier:active {
-    background-color: white;
-    color: #202e1f;
-}
-
-.supprimer {
-    padding: 12px;
-    margin: 12px 0 24px 0;
-    width: 200px;
-    font-family: 'Barlow', sans-serif;
-    font-size: medium;
-    text-transform: uppercase;
-    background-color: #bf213f;
+.close-menu a {
+    display: block;
     color: white;
-    border: none;
-    border-radius: 24px;
-    cursor: pointer;
-    transition: all ease 0.1s;
 }
-
-.supprimer:hover {
-    background-color: white;
-    color: #202e1f;
-}
-
-.supprimer:active {
-    background-color: white;
-    color: #202e1f;
-}
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    background: url(/img/background.jpg) no-repeat top center;
-    background-size: 100%;
-    background-color: #d8ebef;
-    font-family: 'Barlow', sans-serif;
-    font-size: 16px;
-}
-
-@media screen and (max-width:768px)  {
-    html {
-        background: url(/img/background_mobile.jpg) no-repeat top center;
-        background-size: contain;
-        background-color: #dff2f6;
-    }
-}
-
-
-
 
 /* HEADER */
 
+header {
+    margin-bottom: 2vw;
+}
+
 
 .logo {
-    margin-top: 11vw;
+    padding-top: 11vw;
     margin-bottom: 5vw;
 }
 
 @media screen and (max-width:768px)  {
     .logo {
-        margin-top: 30vw;
+        padding-top: 18vw;
     }
 }
 
@@ -233,7 +112,6 @@ html {
 
 .menu {
     list-style-type: none;
-    margin-bottom: 8vw;
     font-size: 1.125em;
     font-weight: 400;
     text-transform: uppercase;
@@ -277,16 +155,13 @@ html {
     #intro {
         font-size: 6vw;
         margin-top: 16vw;
-        margin-bottom: 112vw;
+        margin-bottom: 120vw;
     }
 }
 
 #texte_rouge {
     color: #bf213f;
 }
-
-
-
 
 /* MAIN */
 
@@ -439,7 +314,7 @@ html {
     text-transform: uppercase;
     padding: 0.5em 0;
     font-size: 1.5em;
-    background-color: black;
+    background-color: #0f0f0f;
     border-radius: 40px;
     transition: all 0.2s;
 }
@@ -449,13 +324,194 @@ html {
     background-color: #f2f2f2;
 }
 
+.blocReservation {
+    background-color: #bf213f;
+    color: white;
+    text-align: center;
+    margin-top: 4vw;
+    padding-bottom: 4vw;
+}
 
+.blocReservation h1 {
+    font-weight: 400;
+    padding: 1em 0;
+}
 
+.blocReservation p {
+    padding: 1em 0;
+}
 
+.table_picto {
+    text-align: center;
+    margin-bottom: 4vw;
+}
+input, textarea {
+    padding: 8px 4px;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    color: #202e1f;
+    border: 2px solid #213629;
+    border-radius: 8px;
+}
+
+input {
+    width: 200px;
+    margin: 0 8px 16px 8px;
+}
+
+textarea {
+    resize: none;
+    margin: 16px 8px;
+    width: 416px;
+}
+
+@media screen and (max-width:459px) {
+    textarea {
+        width: 200px;
+    }
+}
+
+input[type=number] {
+    font-size: x-large;
+    font-weight: 900;
+}
+
+input[type=date], input[type=time] {
+    padding: 12px 8px;
+    font-size: x-large;
+    font-weight: 900;
+}
+
+input:focus {
+    outline: none;
+    border-color: yellowgreen;
+}
+
+.recap {
+    margin: 0 24px;
+    text-align: center;
+    font-size: large;
+}
+
+.erreur_champ {
+    color: #bf213f;
+    width: auto;
+    font-weight: 900;
+    padding: 8px 4px;
+    text-align: center;
+    background-color: #e0b2bb;
+}
+
+.reservez {
+    padding: 12px;
+    margin: 24px 0;
+    width: 240px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    background-color: #0f0f0f;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.reservez:hover {
+    background-color: white;
+    color: #bf213f;
+}
+
+.reservez:active {
+    background-color: white;
+    color: #202e1f;
+}
+
+.confirmer {
+    display: block;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 24px auto 12px;
+    width: 200px;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+
+.confirmer:hover {
+    background-color: white;
+    color: #0f0f0f;
+}
+
+.confimer:active {
+    background-color: white;
+    color: #0f0f0f;
+}
+
+.modifier {
+    display: block;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 24px auto 12px;
+    width: 200px;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+
+.modifier:hover {
+    background-color: white;
+    color: #0f0f0f;
+}
+
+.modifier:active {
+    background-color: white;
+    color: #0f0f0f;
+}
+
+.supprimer {
+    padding: 12px;
+    margin: 12px 0 24px 0;
+    width: 200px;
+    font-family: 'Barlow', sans-serif;
+    font-size: medium;
+    text-transform: uppercase;
+    background-color: #0f0f0f;
+    color: white;
+    border: 2px solid #0f0f0f;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+
+.supprimer:hover {
+    background-color: white;
+    color: #0f0f0f;
+    border-color: white;
+}
+
+.supprimer:active {
+    background-color: white;
+    color: #0f0f0f;
+    border-color: white;
+}
 /* FOOTER */
 
 
-.footer {
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -465,7 +521,7 @@ html {
     padding: 1.25em;
 }
 
-.footer div {
+footer div {
     margin: 1em 0;
 }
 
@@ -490,26 +546,13 @@ html {
     justify-content: center;
 }
 
-.reseaux div {
+.reseaux a {
     padding: 0 1.5em;
+    color: white;
 }
 
-.fb a {
-    display: block;
-    height: 40px;
-    width: 40px;
-    background: url(/img/facebook.png) no-repeat center;
-}
-
-.insta a {
-    display: block;
-    height: 40px;
-    width: 40px;
-    background: url(/img/instagram.png) no-repeat center;
-}
-
-.fb a:hover {
-    background-image: url(/img/facebook_hover.png);
+.reseaux a:hover {
+    color: #f5bd19;
 }
 
 .insta a:hover {
@@ -521,4 +564,80 @@ html {
     color: #415d3f;
     text-align: center;
     border-top: #415d3f 2px solid;
+}
+@media screen and (min-width:769px) {
+    
+    .animated-box {
+        box-sizing: border-box;
+    }
+    
+    .fade-in {
+        -webkit-animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+    @-webkit-keyframes fade-in {
+        0% {
+            transform: translateY(48px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade-in {
+        0% {
+            transform: translateY(48px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+.background-fade-in {
+    -webkit-animation: background-fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: background-fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+@-webkit-keyframes background-fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes background-fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: url(/img/background.jpg) no-repeat top center;
+    background-size: 100%;
+    background-color: #d8ebef;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+}
+
+@media screen and (max-width:768px)  {
+    html {
+        background: url(/img/background_mobile.jpg) no-repeat top center;
+        background-size: contain;
+        background-color: #dff2f6;
+    }
 }

@@ -7,7 +7,10 @@
     <main>
     <section class="blocReservation">
         <h1>Réservez votre table</h1>
-
+        
+        <div class="table_picto">
+            <img src="img/table_chaises.png">
+        </div>
         {{--
         @foreach ($errors->all() as $error)
                 <div>{{ $error }}</div>
@@ -21,9 +24,7 @@
                 @error('nom')
                 <div class="erreur_champ">{{ $message }}</div>
                 @enderror
-            </div>
 
-            <div>
                 <input type="tel" id="tel" name="tel" placeholder="Votre numéro de téléphone" value="{{ old('tel', $reservation->tel) }}">
                 @error('tel')
                 <div class="erreur_champ">{{ $message }}</div>
@@ -37,9 +38,7 @@
                 @error('date')
                 <div class="erreur_champ">{{ $message }}</div>
                 @enderror
-            </div>
 
-            <div>
                 <input type="time" id="heure" name="heure" value="{{ old('heure', $reservation->heure) }}">
                 @error('time')
                 <div class="erreur_champ">{{ $message }}</div>
@@ -48,7 +47,7 @@
             <div>
                 <p>...et le nombre de couverts</p>
             
-                <input type="number" id="couverts" name="couverts" value="{{ old('couverts', $reservation->couverts) }}" min="1" max="12" >
+                <input type="number" id="couverts" name="couverts" value="{{ old('couverts', $reservation->couverts) }}" min="1" max="12" placeholder="1" >
                 @error('couverts')
                 <div class="erreur_champ">{{ $message }}</div>
                 @enderror

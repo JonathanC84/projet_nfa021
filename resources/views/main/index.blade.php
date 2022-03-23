@@ -36,7 +36,7 @@
                     <h2 class="titre_actu">Pour un plat acheté,<br>une salade de fruits offerte</h2>
                 </div>
             </div>
-            <a class="lien_reservez" href="{{ route('reservation.create') }}">Réservez ></a>
+            <a class="lien_reservez" href="{{ route('reservation.create') }}">Réservez</a>
 
         </div>
 
